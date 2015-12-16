@@ -1,0 +1,12 @@
+@(message: String)(implicit messages: Messages)
+
+@import utils.i18n.MessageUtils._
+@main("Welcome to Play") {
+    <h2>Language: @messages.lang.language</h2>
+    <ul>
+        <li>@messages.pluralize("new.messages", 0)</li>
+        <li>@messages.pluralize("new.messages", 1)</li>
+        <li>@messages.pluralize("new.messages", 2)</li>
+    </ul>
+
+}
